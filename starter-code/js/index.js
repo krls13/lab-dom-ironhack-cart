@@ -24,10 +24,8 @@ function getTotalPrice() {
     else {
       sum = 0
     }
-    console.log(sum)
     document.getElementsByClassName("totalPrice")[i].innerHTML = "$" + sum + ".00"
-  }
-  
+  } 
 }
 
 function createQuantityInput(){
