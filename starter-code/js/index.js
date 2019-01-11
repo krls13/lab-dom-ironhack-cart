@@ -1,5 +1,11 @@
 function deleteItem(e){
-  console.log("delete");
+  console.log(e);
+
+  var rowToDelete = e.currentTarget.parentNode.parentNode
+
+  var parentOfRowToDelete = rowToDelete.parentNode
+
+  parentOfRowToDelete.removeChild(rowToDelete)
 }
 
 function getPriceByProduct(itemNode){
@@ -63,7 +69,7 @@ window.onload = function(){
   calculatePriceButton.onclick = getTotalPrice;
   //createItemButton.onclick = createNewItem;
 
-  for(var i = 0; i<deleteButtons.length ; i++){
+  for(var i = 0; i < deleteButtons.length ; i++){
     deleteButtons[i].onclick = deleteItem;
   }
 
